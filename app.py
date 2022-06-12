@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template
+# still need to import file
 
 # creates instance of the application
 app = Flask(__name__)
@@ -9,12 +10,11 @@ app = Flask(__name__)
 def hello_world():
     return "Hello World!"
 
-@app.route('/tutorial')
-# when making methods, if the names of methods are the
-# same, then a 404 error code will appear, as they both 
-# will negate each other
-def tutmessage():
-    return 'I am a basic tutorial on routes and end points'
+# routes can also point to files within the app
+# making it effective on its own if need be
+@app.route('/html')
+def get_html_page():
+    return render_template('web-page.html')
 
 if __name__ == '__main__':
     # changes in code will show without 
