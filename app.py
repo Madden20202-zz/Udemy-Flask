@@ -3,16 +3,17 @@ from flask import Flask
 # creates instance of the application
 app = Flask(__name__)
 
-# this is a decorator that shows the
-# url for this specific app
-
 # all routes need their own unique url
+# lets practice
 @app.route('/')
-
-# Function that will be ran once 
-# the url is called
 def hello_world():
     return "Hello World!"
 
+@app.route('/tutorial')
+def tutmessage():
+    return 'I am a basic tutorial on routes and end points'
+
 if __name__ == '__main__':
-    app.run()
+    # changes in code will show without 
+    # reloading everything
+    app.run(debug=True)
