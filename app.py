@@ -10,6 +10,9 @@ def hello_world():
     return "Hello World!"
 
 @app.route('/tutorial')
+# when making methods, if the names of methods are the
+# same, then a 404 error code will appear, as they both 
+# will negate each other
 def tutmessage():
     return 'I am a basic tutorial on routes and end points'
 
