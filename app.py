@@ -25,7 +25,12 @@ order = {
 # now lets display this
 @app.route('/orders')
 def display_order():
-    response = make_response(jsonify(order))
+    # retrieves the order collection and then 
+    # serializes it and then is displayed
+
+    # this also returns a 200 code to show a success
+    response = make_response(jsonify(order), 200)
+    # this response is now given all of the information needed
     return response
 
 if __name__ == '__main__':
