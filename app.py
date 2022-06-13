@@ -13,6 +13,7 @@ def get_string():
         req=request.args
         # so to get anything to happen, the url HAS to look like so:
         # /query? then the information, such as John Doe
+        # so the ? starts where the string is being received
         return " ".join(f"{k} {v}" for k,v in req.items())
 
     # this is the return error 
