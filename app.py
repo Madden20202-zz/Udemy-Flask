@@ -17,6 +17,12 @@ order = {
 # Now HTTP Post will create new data, 
 # and more importantly, collections
 
+# the default is get, all others must be stated
+@app.route('/orders', methods=["POST"])
+def make_new_order(orderid): # time to make a new one
+    req = request.get_json()
+
+
 @app.route('/orders')
 def display_order():
     response = make_response(jsonify(order), 200)
