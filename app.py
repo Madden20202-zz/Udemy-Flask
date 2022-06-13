@@ -10,19 +10,17 @@ order = {
         "size": "small",
         "toppings": "cheese",
         "crust": "deep dish"
-
     }
-
 }
+
+
+# Now HTTP Post will create new data, 
+# and more importantly, collections
 
 @app.route('/orders')
 def display_order():
     response = make_response(jsonify(order), 200)
     return response
-
-# Now HTTP Post will create new data, 
-# and more importantly, collections
-
 
 if __name__ == '__main__':
     # changes in code will show without 
