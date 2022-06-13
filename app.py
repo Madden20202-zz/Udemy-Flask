@@ -4,17 +4,8 @@ from flask import Flask, render_template
 # creates instance of the application
 app = Flask(__name__)
 
-# all routes need their own unique url
-# lets practice
-@app.route('/')
-def hello_world():
-    return "Hello World!"
-
-# routes can also point to files within the app
-# making it effective on its own if need be
-@app.route('/html')
-def get_html_page():
-    return render_template('web-page.html')
+# Let's learn how to query
+# a string
 
 if __name__ == '__main__':
     # changes in code will show without 
