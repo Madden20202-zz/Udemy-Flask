@@ -3,11 +3,6 @@ from flask import Flask, make_response, jsonify
 # creates instance of the application
 app = Flask(__name__)
 
-# Let's learn about GET requests
-# First, GET needs a collection where 
-# it can "get" the data needed
-
-# normally these would be in their own file, to keep things clean
 order = {
     # name of the first order
     "order1": {
@@ -20,16 +15,14 @@ order = {
 
 }
 
-# now lets display this
 @app.route('/orders')
 def display_order():
-    # retrieves the order collection and then 
-    # serializes it and then is displayed
-
-    # this also returns a 200 code to show a success
     response = make_response(jsonify(order), 200)
-    # this response is now given all of the information needed
     return response
+
+# Now HTTP Post will create new data, 
+# and more importantly, collections
+
 
 if __name__ == '__main__':
     # changes in code will show without 
