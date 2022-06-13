@@ -22,6 +22,11 @@ order = {
 
 }
 
+# now lets display this
+@app.route('/orders')
+def display_order():
+    
+
 if __name__ == '__main__':
     # changes in code will show without 
     # reloading everything
