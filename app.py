@@ -1,4 +1,4 @@
-from flask import Flask, make_response
+from flask import Flask, make_response, jsonify
 
 # creates instance of the application
 app = Flask(__name__)
@@ -25,7 +25,8 @@ order = {
 # now lets display this
 @app.route('/orders')
 def display_order():
-    response = 
+    response = make_response(jsonify(order))
+    return response
 
 if __name__ == '__main__':
     # changes in code will show without 
