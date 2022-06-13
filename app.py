@@ -22,7 +22,7 @@ order = {
 def make_new_order(orderid): # time to make a new one
     req = request.get_json()
     if orderid in order:
-        response = make_response(jsonify({"Error: that order could not be processed"}), 200)
+        response = make_response(jsonify({"Error: that order could not be processed"}), 400)
 
 
 @app.route('/orders')
