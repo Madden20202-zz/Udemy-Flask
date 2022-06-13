@@ -21,6 +21,8 @@ order = {
 @app.route('/orders', methods=["POST"])
 def make_new_order(orderid): # time to make a new one
     req = request.get_json()
+    if orderid in order:
+        response = make_response(jsonify({"Error: that order could not be processed"}), 200)
 
 
 @app.route('/orders')
