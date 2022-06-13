@@ -24,6 +24,7 @@ def make_new_order(orderid): # time to make a new one
     if orderid in order:
         response = make_response(jsonify({"Error: that order could not be processed"}), 400)
 
+    return "Something Went Wrong"
 
 @app.route('/orders')
 def display_order():
