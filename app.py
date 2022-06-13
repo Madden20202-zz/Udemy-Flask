@@ -13,6 +13,10 @@ app = Flask(__name__)
 order = {
     # name of the first order
     "order1": {
+        # most collections come as key value pairs
+        "size": "small",
+        "toppings": "cheese",
+        "crust": "deep dish"
 
     }
 
