@@ -7,9 +7,7 @@ app = Flask(__name__)
 # First, GET needs a collection where 
 # it can "get" the data needed
 
-# let's use a pizza shop as an example
-
-# name of order
+# normally these would be in their own file, to keep things clean
 order = {
     # name of the first order
     "order1": {
