@@ -18,7 +18,7 @@ order = {
 # and more importantly, collections
 
 # the default is get, all others must be stated
-@app.route('/orders', methods=["POST"])
+@app.route('/orders/<orderid>', methods=["POST"])
 def make_new_order(orderid): # time to make a new one
     req = request.get_json()
     if orderid in order:
