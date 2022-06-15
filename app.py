@@ -62,4 +62,4 @@ def display_order():
 if __name__ == '__main__':
     # changes in code will show without 
     # reloading everything
-    app.run(debug=True, host='localhost')
+    app.run(debug=True)
