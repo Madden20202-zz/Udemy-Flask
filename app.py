@@ -57,7 +57,7 @@ def update_order(orderid):
         return response
     else:
         order[orderid] = req
-        response = make_response(jsonify({"Something went Wrong"}), 400)
+        response = make_response(jsonify({"We made a new Order for you"}), 400)
         return response
 
 
