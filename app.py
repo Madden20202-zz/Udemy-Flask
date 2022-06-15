@@ -26,7 +26,6 @@ def make_new_order(orderid): # time to make a new one
     order.update({orderid:req})
     response =  make_response(jsonify({"message": "A new order is made"}), 200)
     return response
-    return "Something Went Wrong"
 
 @app.route('/orders')
 def display_order():
@@ -36,4 +35,4 @@ def display_order():
 if __name__ == '__main__':
     # changes in code will show without 
     # reloading everything
-    app.run(debug=True)
+    app.run(debug=True, host='localhost')
