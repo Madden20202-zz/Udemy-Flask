@@ -49,7 +49,9 @@ def make_new_order(orderid): # time to make a new one
 
 @app.route("/orders/<orderid>", methods=["PUT"])
 def update_order(orderid):
-    return "hello world"
+    req: request.get_json()
+    if orderid in order:
+        order.update({orderid:req})
 
 
 @app.route('/orders')
