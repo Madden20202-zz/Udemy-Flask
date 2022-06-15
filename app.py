@@ -38,7 +38,15 @@ def make_new_order(orderid): # time to make a new one
 
 # Now let's learn PUT
 # POST allows the user to update certain data
-# in this case, it is their pizza order
+
+# why is this useful?
+# It allows the user to update certain things, 
+# without having to fill out a whole new form
+# EX: I want to change my pizza order so it is 
+# a meat lovers that's small and with a thin crust
+# I don't want a whole new order, or to redo the whole order,
+# just these modifications. This is what PUT does perfectly
+
 
 @app.route('/orders')
 def display_order():
