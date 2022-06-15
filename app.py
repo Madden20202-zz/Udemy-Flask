@@ -36,7 +36,7 @@ def make_new_order(orderid): # time to make a new one
         response =  make_response(jsonify({"message": "A new order is made"}), 200)
         return response
 
-# Now let's learn POST
+# Now let's learn PUT
 # POST allows the user to update certain data
 # in this case, it is their pizza order
 
