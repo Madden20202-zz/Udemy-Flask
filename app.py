@@ -47,6 +47,10 @@ def make_new_order(orderid): # time to make a new one
 # I don't want a whole new order, or to redo the whole order,
 # just these modifications. This is what PUT does perfectly
 
+@app.route("/orders/<orderid>")
+def update_order(orderid):
+    return "hello world"
+
 
 @app.route('/orders')
 def display_order():
