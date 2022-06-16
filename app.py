@@ -49,7 +49,7 @@ def make_new_order(orderid): # time to make a new one
 
 @app.route("/orders/modify/<orderid>", methods=["PUT"])
 def update_order(orderid):
-    req: request.get_json()
+    req = request.get_json()
     if orderid in order:
         order[orderid] = req
         # order.update({orderid:req})
@@ -57,7 +57,7 @@ def update_order(orderid):
         return response
     else:
         order[orderid] = req
-        response = make_response(jsonify({"We made a new Order for you"}), 400)
+        response = make_response(jsonify({"We made a new Order for you"}), 200)
         return response
 
 
