@@ -4,25 +4,25 @@ from flask import Flask, make_response, jsonify, request
 app = Flask(__name__)
 
 order = {
-    # name of the first order
-    "order1": {
-        # most collections come as key value pairs
-
-        # in postman this must be present, 
-        # empty JSON files will create errors
+    {
+        # move the order number to the order 
+        # to make it easier to transfer
+        "orderid": "order1",
         "size": "small",
         "toppings": "cheese",
         "crust": "deep dish"
     },
 
     # maybe would help to add it into the collection
-    "order2": {
+    {
+        "orderid": "order2",
         "size": "X-Large",
         "topping": "peperoni",
         "crsut": "deep_dish"
     },
 
-    "order3": {
+    {
+        "orderid": "order3",
         "size": "large",
         "topping": "cheese",
         "crust": "thin"
