@@ -13,7 +13,20 @@ order = {
         "size": "small",
         "toppings": "cheese",
         "crust": "deep dish"
-    }
+    },
+
+    # maybe would help to add it into the collection
+    "order2": {
+        "size": "X-Large",
+        "topping": "peperoni",
+        "crsut": "deep_dish"
+    },
+
+    "order3": {
+        "size": "large",
+        "topping": "cheese",
+        "crust": "thin"
+    } 
 }
 
 
